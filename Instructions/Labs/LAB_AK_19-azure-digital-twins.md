@@ -2,13 +2,8 @@
 lab:
   title: 实验室 19：开发 Azure 数字孪生 (ADT) 解决方案
   module: 'Module 11: Develop with Azure Digital Twins'
-ms.openlocfilehash: 654a98a8b7affffb99e1c88a6c1c9c5a32546488
-ms.sourcegitcommit: 7874419a1f0f346f972914893b4b3644ba84a267
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2022
-ms.locfileid: "139262460"
 ---
+
 # <a name="develop-azure-digital-twins-adt-solutions"></a>开发 Azure 数字孪生 (ADT) 解决方案
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -67,15 +62,15 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
  
     +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab19.json+++
 
-    > 注意：每当看到绿色的“T”符号（例如+++输入此文本+++）时，可以单击关联的文本，信息将键入到虚拟机环境内的当前字段中。
+    > 注意：每当看到绿色的“T”符号（例如 +++输入此文本+++）时，可以单击关联的文本，信息将键入到虚拟机环境内的当前字段中。
 
-1. 如果系统提示登录到 Azure 门户，请输入将要用于本课程的 Azure 凭据。
+1. 如果系统提示登录到 Azure 门户，请输入你在本课程中使用的 Azure 凭据。
 
     将显示“自定义部署”页。
 
-1. 在“订阅”下拉列表中的“项目详细信息”下方，确保你打算在本课程中使用的 Azure 订阅已选中 。
+1. 在“项目详细信息”下的“订阅”下拉列表中，确保你打算在本课程中使用的 Azure 订阅已选中 。
 
-1. 在“资源组”下拉列表中，单击“rg-az220” 。
+1. 在“资源组”下拉列表中，选择“rg-az220” 。
 
     > 注意：如果未列出 rg-az220：
     >
@@ -83,7 +78,7 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
     > 1. 在“名称”下，输入 rg-az220 。
     > 1. 单击 **“确定”** 。
 
-1. 在“实例详细信息”下，“区域”下拉列表中，选择离你最近的区域 。
+1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
     > 注意：如果 rg-az220 组已存在，则“区域”字段将设置为资源组使用的区域，并且为只读 。
 
@@ -176,7 +171,7 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
 
 1. 要查看输入的值，单击“查看 + 创建”。
 
-1. 若要启动部署过程，请单击“创建”。
+1. 若要启动部署过程，请单击“创建”****。
 
     显示“正在进行部署”时，请稍候。
 

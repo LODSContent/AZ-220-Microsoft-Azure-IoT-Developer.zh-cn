@@ -2,13 +2,8 @@
 lab:
   title: 实验室 10：使用时序见解探索和分析具有时间戳的数据
   module: 'Module 5: Insights and Business Integration'
-ms.openlocfilehash: fd17b8e705bbd280adb47873c2d862da7ed66be3
-ms.sourcegitcommit: d1db4018f68e024ddb742eea332060a9892e5962
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2022
-ms.locfileid: "145942962"
 ---
+
 # <a name="explore-and-analyze-time-stamped-data-with-time-series-insights"></a>使用时序见解探索和分析具有时间戳的数据
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -70,7 +65,7 @@ ms.locfileid: "145942962"
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击“确定”  。
+    > 1. 单击 **“确定”** 。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -152,7 +147,7 @@ ms.locfileid: "145942962"
 
         +++sensor-th-truck0001+++
 
-    1. 在页面底部，单击“保存”。
+    1. 在页面底部，单击“保存”。****
 
     1. 重复上述三个步骤以创建设备 ID 为 sensor-th-airplane0001 和 sensor-th-container0001 的 IoT 设备 。
 
@@ -174,7 +169,7 @@ ms.locfileid: "145942962"
 
     1. 在左侧菜单的“安全设置”下，单击“共享访问策略” 。
 
-    1. 单击“iothubowner”。
+    1. 单击“iothubowner”。****
 
     1. 请注意，列出了 IoT 中心主要连接字符串。
 
@@ -402,7 +397,7 @@ Azure 时序见解 (TSI) 是一种端对端平台即服务产品/服务，用于
 
 1. 在“查询 2”下，将“度量值”下拉列表设置为“湿度”，将“拆分方式”下拉列表设置为“iothub-connection-device-id”，然后单击“添加”。
 
-    请注意，现在显示了两个图表。 上图显示 **温度**，下图显示 **湿度**，两个图使用各自的 Y 轴刻度。
+    请注意，现在显示了两个图表。 上图显示**温度**，下图显示**湿度**，两个图使用各自的 Y 轴刻度。
 
 1. 将鼠标指针放在其中一条图形线条上。
 

@@ -2,13 +2,8 @@
 lab:
   title: 实验室 6：使用 DPS 安全且大规模地自动预配 IoT 设备
   module: 'Module 3: Device Provisioning at Scale'
-ms.openlocfilehash: 5e9c0a761111d5763f2e313cc249052b9ea61e30
-ms.sourcegitcommit: b1a2557baf4854683036fde125ada75c6f3dbbfd
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "141200494"
 ---
+
 # <a name="automatically-provision-iot-devices-securely-and-at-scale-with-dps"></a>使用 DPS 安全且大规模地自动预配 IoT 设备
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -475,7 +470,7 @@ ms.locfileid: "141200494"
 
     “certificatePassword”变量包含 X.509 设备证书的密码。 它设置为 `1234`，因为这是“certGen.sh”帮助程序脚本用于生成 X.509 证书的默认密码。
 
-    > **注意**：在本实验室中，密码是硬编码的。 在 _生产_ 方案中，需要以更安全的方式存储密码，例如存储在 Azure 密钥保管库中。 此外，证书文件 (PFX) 应该使用硬件安全模块 (HSM) 安全地存储在生产设备上。
+    > **注意**：在本实验室中，密码是硬编码的。 在_生产_方案中，需要以更安全的方式存储密码，例如存储在 Azure 密钥保管库中。 此外，证书文件 (PFX) 应该使用硬件安全模块 (HSM) 安全地存储在生产设备上。
     >
     > HSM（硬件安全模块）用于安全的、基于硬件的设备机密存储，是最安全的机密存储形式。 X.509 证书和 SAS 令牌都可以存储在 HSM 中。 HSM 可以与预配服务支持的所有证明机制一起使用。 本课程稍后将更详细地介绍 HMS。
 
@@ -820,7 +815,7 @@ ms.locfileid: "141200494"
 
 1. 在“启用条目”下，单击“禁用”。
 
-1. 在边栏选项卡顶部单击“保存”。
+1. 在边栏选项卡顶部单击“保存”。****
 
 1. 导航回 Azure 仪表板。
 
@@ -892,7 +887,7 @@ ms.locfileid: "141200494"
 
     禁用 DPS 中的组注册可以使你暂时禁用此注册组中的设备。 这提供了这些设备不应使用的 X.509 证书的临时列表。
 
-1. 在边栏选项卡顶部单击“保存”。
+1. 在边栏选项卡顶部单击“保存”。****
 
     如果您现在运行一个模拟设备，您将看到一条错误消息，与您在禁用的个人注册中看到的类似。
 

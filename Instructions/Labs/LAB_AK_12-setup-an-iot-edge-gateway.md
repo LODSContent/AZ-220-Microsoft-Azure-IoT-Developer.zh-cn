@@ -2,13 +2,8 @@
 lab:
   title: 实验室 12：设置 IoT Edge 网关
   module: 'Module 6: Azure IoT Edge Deployment Process'
-ms.openlocfilehash: a710ea3e39a2c63da58925f669b7bdb8f983a4e7
-ms.sourcegitcommit: b9f2c53cb54dde700e21476bcc7435310d15445d
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "141604966"
 ---
+
 # <a name="setup-an-iot-edge-gateway"></a>设置 IoT Edge 网关
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -152,7 +147,7 @@ ms.locfileid: "141604966"
 
     消息路由的 `FROM /*` 部分将匹配所有设备到云的消息，或来自任何模块或叶设备的孪生更改通知。 然后，`INTO $upstream` 将指示路由将这些消息发送到 Azure IoT 中心。
 
-    > **注意**：若要详细了解如何在 Azure IoT Edge 中配置消息路由，请参阅 [了解如何在 IoT Edge 中部署模块和建立路由](https://docs.microsoft.com/azure/iot-edge/module-composition#declare-routes#declare-routes)一文。
+    > **注意**：若要详细了解如何在 Azure IoT Edge 中配置消息路由，请参阅[了解如何在 IoT Edge 中部署模块和建立路由](https://docs.microsoft.com/azure/iot-edge/module-composition#declare-routes#declare-routes)一文。
 
 1. 在边栏选项卡底部，单击“查看 + 创建”。
 
@@ -160,7 +155,7 @@ ms.locfileid: "141604966"
 
 1. 请花费片刻时间查看部署清单。
 
-1. 单击边栏选项卡底部的“创建” 。
+1. 单击边栏选项卡底部的“创建” ****。
 
 #### <a name="task-2-provision-iot-edge-vm"></a>任务 2：预配 IoT Edge VM
 
@@ -676,7 +671,7 @@ Azure IoT Edge 支持的 IoT 通信协议具有以下端口映射：
 
     验证存在 X.509 证书之后，将使用 X509Store 类将证书加载到当前用户的证书存储中。 然后，该证书将按需提供，以确保与网关的通信安全 - 这是在设备客户端中自动发生的，因此没有其他代码。
 
-    > **信息**：可以在 [此处](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.1)了解有关 X509Store 类的详细信息。
+    > **信息**：可以在[此处](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.1)了解有关 X509Store 类的详细信息。
 
 1. 在“终端”菜单上，单击“新终端”。
 

@@ -2,13 +2,8 @@
 lab:
   title: 实验室 03：设置开发环境
   module: 'Module 2: Devices and Device Communication'
-ms.openlocfilehash: ff8debfc695c847537f93449f9849775b2945b9c
-ms.sourcegitcommit: 7281efeb9cb5654361c2f1aa93aea724a3898966
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955879"
 ---
+
 # <a name="set-up-the-development-environment"></a>设置开发环境
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -463,7 +458,7 @@ Microsoft 已经创建了一个 GitHub 存储库来提供对实验室资源文�
 
 1. 请单击“浏览”，然后导航到方便访问的文件夹位置。
 
-    > **重要说明**：默认情况下，Windows 的 [最大文件路径长度为 260](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#maximum-path-length-limitation)。 由于 ZIP 中的文件路径已经很长，请避免在具有大文件路径的嵌套文件夹中提取存档。 例如，提示提取 zip 的默认路径可能类似于 c:\users\\[username]\downloads\AZ-220-Microsoft-Azure-IoT-Developer-master - 建议尽量缩短此路径，例如 c:\az220 
+    > **重要说明**：默认情况下，Windows 的[最大文件路径长度为 260](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#maximum-path-length-limitation)。 由于 ZIP 中的文件路径已经很长，请避免在具有大文件路径的嵌套文件夹中提取存档。 例如，提示提取 zip 的默认路径可能类似于 c:\users\\[username]\downloads\AZ-220-Microsoft-Azure-IoT-Developer-master - 建议尽量缩短此路径，例如 c:\az220 
 
 1. 要提取文件，请单击“提取”。
 

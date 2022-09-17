@@ -2,13 +2,8 @@
 lab:
   title: 实验室 13：使用 VS Code 在 Azure IoT Edge 上开发、部署和调试自定义模块
   module: 'Module 7: Azure IoT Edge Modules'
-ms.openlocfilehash: 9586c15c0e16a0bdbe7850a0c28af480dcf34086
-ms.sourcegitcommit: 7281efeb9cb5654361c2f1aa93aea724a3898966
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955882"
 ---
+
 # <a name="develop-deploy-and-debug-a-custom-module-on-azure-iot-edge-with-vs-code"></a>使用 VS Code 在 Azure IoT Edge 上开发，部署和调试自定义模块
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -78,7 +73,7 @@ ms.locfileid: "145955882"
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击“确定”  。
+    > 1. 单击 **“确定”** 。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -262,7 +257,7 @@ Azure 容器注册表为容器部署提供专用 Docker 映像的存储。 Azure
 
 1. 当提示你输入解决方案名称时，输入“边缘解决方案”
 
-    该名称将作为新建的 **IoT Edge 解决方案** 的目录名称 。
+    该名称将作为新建的**IoT Edge 解决方案**的目录名称 。
 
 1. 当提示你选择模块模板时，单击 **C# Module**。
 
@@ -645,9 +640,9 @@ Azure 容器注册表为容器部署提供专用 Docker 映像的存储。 Azure
 
 1. 若要打开此标记的详细信息窗格，请单击 **0.0.1-amd64**。
 
-    请注意列出的属性，包括 _存储库_、_标记_、_标记创建日期_、_标记最近更新日期_ 以及显示有关标记信息的其他属性。
+    请注意列出的属性，包括_存储库_、_标记_、_标记创建日期_、_标记最近更新日期_以及显示有关标记信息的其他属性。
 
-1. 保存 **存储库** 和 **标记** 属性值的副本。
+1. 保存**存储库**和**标记**属性值的副本。
 
     若要复制这些值，可以单击位于显示值右侧的“复制到剪贴板”的按钮。
 
@@ -700,7 +695,7 @@ Azure 容器注册表为容器部署提供专用 Docker 映像的存储。 Azure
 
 1. 在“添加 IoT Edge 模块”窗格的“IoT Edge 模块名称”下，输入“objectcountingmodule”
 
-1. 在 **模块设置** 选项下，要为自定义 IoT Edge 模块的 Docker 映像输入完整的 URI 和标记名称，请使用以下格式：
+1. 在**模块设置**选项下，要为自定义 IoT Edge 模块的 Docker 映像输入完整的 URI 和标记名称，请使用以下格式：
 
     ```text
     <container-registry-login-server>/<repository-name>:<tag>
@@ -712,7 +707,7 @@ Azure 容器注册表为容器部署提供专用 Docker 映像的存储。 Azure
     * `<repository-name>` * 之前复制的自定义 IoT Edge 模块 Docker 映像的存储库名称。
     * `<tag>` * 之前复制用于自定义 IoT Edge 模块的 Docker 映像的标记。
 
-    要输入到字段中的 **映像 URI** 将类似于：
+    要输入到字段中的**映像 URI**将类似于：
 
     ```text
     acraz220trainingcah191204.azurecr.io/objectcountingmodule:0.0.1-amd64

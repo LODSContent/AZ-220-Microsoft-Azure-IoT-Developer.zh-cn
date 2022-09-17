@@ -2,13 +2,8 @@
 lab:
   title: 实验室 15：使用 Azure IoT 中心远程监视和控制设备
   module: 'Module 8: Device Management'
-ms.openlocfilehash: f0ebccb4b7c7b415397ba0b36ddbb7c96e59717c
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872799"
 ---
+
 # <a name="remotely-monitor-and-control-devices-with-azure-iot-hub"></a>使用 Azure IoT 中心远程监视和控制设备
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -90,7 +85,7 @@ Contoso 已责成你实现自动化系统，以使储藏室环境保持在控制
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击“确定”  。
+    > 1. 单击 **“确定”** 。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -310,7 +305,7 @@ Contoso 已责成你实现自动化系统，以使储藏室环境保持在控制
 
     应已保存由你之前在练习 1 中运行的 ARM 模板生成的 iothubowner 共享访问策略主要连接字符串。
 
-    > **注意**：你可能会好奇为什么使用 iothubowner 共享策略而不是使用服务共享策略。 答案与分配给每个策略的 IoT 中心权限有关。 **服务** 策略具有 **ServiceConnect** 权限，通常由后端云服务使用。 它具有以下权利：
+    > **注意**：你可能会好奇为什么使用 iothubowner 共享策略而不是使用服务共享策略。 答案与分配给每个策略的 IoT 中心权限有关。 **服务**策略具有 **ServiceConnect** 权限，通常由后端云服务使用。 它具有以下权利：
     >
     > * 授予对面向云服务的通信和监视终结点的访问权限。
     > * 授予接收设备到云消息、发送云到设备消息和检索相应传送确认的权限。
@@ -323,7 +318,7 @@ Contoso 已责成你实现自动化系统，以使储藏室环境保持在控制
     >
     > 由于 iothubowner 策略已被授予“注册表写入”权限，同时它还继承了“注册表读取”权限，因此它适合你的需要  。
     >
-    > 在生产方案中，你可以考虑添加一个新的仅具有 **服务连接** 和 **注册读取** 权限的共享访问策略。
+    > 在生产方案中，你可以考虑添加一个新的仅具有**服务连接**和**注册读取**权限的共享访问策略。
 
 1. 将 \<your event hub endpoint\>、\<your event hub path\> 和 \<your event hub SaS key\> 替换为之前在本实验室中保存的值  。
 
@@ -333,13 +328,13 @@ Contoso 已责成你实现自动化系统，以使储藏室环境保持在控制
 
     > **注意**：此代码 `var consumerGroup = EventHubConsumerClient.DefaultConsumerGroupName;` 将字符串 `"$Default` 分配给 consumerGroup。 通常的做法是创建自定义使用者组，在本例中，此处将改用使用者组的名称。
 
-    > **信息**：可在 [此处](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups)详细了解使用者组
+    > **信息**：可在[此处](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups)详细了解使用者组
 
     此 EventHubConsumerClient 类用于从 EventHub（在本例中为 IoT 中心的内置事件中心终结点）读取值 。
 
     EventHubConsumerClient 引用存储在 consumer 变量中 。 接下来，使用 consumer 变量检索分区 ID 字符串的数组，然后将其存储在 d2cPartitions 变量中。 该数组将用于创建将从每个分区接收消息的任务列表。
 
-    > **信息**：可在 [此处](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling#partitions)详细了解分区用途。
+    > **信息**：可在[此处](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling#partitions)详细了解分区用途。
 
     由于从设备向 IoT 中心发送的消息可能由任意分区处理，因此应用必须从每个分区中检索消息。 代码的下一部分创建异步任务列表 - 每个任务将接收来自特定分区的消息。 最后一行将等待所有任务完成 - 由于每个任务将进去无限循环，此行可阻止应用程序退出。
 
@@ -353,7 +348,7 @@ Contoso 已责成你实现自动化系统，以使储藏室环境保持在控制
 
     下一部分从请求的分区读取事件作为异步枚举，从而允许事件在分区上可用时进行迭代，如果没有可用的事件，则在必要时等待。
 
-    > **信息**：可以在 [此处](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-8#asynchronous-streams)详细了解异步流
+    > **信息**：可以在[此处](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-8#asynchronous-streams)详细了解异步流
 
     如果接收到事件，则二进制正文数据将转换为字符串并写入控制台 - 当然，在“现实世界”中，JSON 可能会被反序列化等等。 然后循环访问事件数据属性，并且在本例中，应检查事件数据属性以查看值是否为 true - 在当前场景中，这表示警报。 如果发现警报，则将其写入控制台。
 
@@ -436,7 +431,7 @@ Contoso 已责成你实现自动化系统，以使储藏室环境保持在控制
 
     此方法的第一行确定奶酪储藏室风扇当前是否处于“故障”状态 - 奶酪储藏室模拟器制定的假设是，一旦风扇处于故障状态，任何后续命令都将自动失败。 因此，将创建一个“result”属性设置为“Fan Failed”的 JSON 字符串 。 然后会构造一个新的 MethodResponse 对象，该对象的结果字符串编码为一个字节数组和一个 HTTP 状态代码 - 本例中使用 400，在 REST API 的上下文中表示发生一般性客户端错误 。 由于需要直接方法回调才可返回 Task\<MethodResponse\>，因此将创建和返回新任务。
 
-    > **信息**：可在 [此处](https://restfulapi.net/http-status-codes/)详细了解如何在 REST API 中使用 HTTP 状态代码。
+    > **信息**：可在[此处](https://restfulapi.net/http-status-codes/)详细了解如何在 REST API 中使用 HTTP 状态代码。
 
     如果风扇状态并非“故障”，则代码将继续处理在方法请求中发送的数据。 “methodRequest.Data”属性中包含字节数组形式的数据，因此它首先转换为字符串。 在此场景中，该数据应为以下两个值（包括引号）：
 

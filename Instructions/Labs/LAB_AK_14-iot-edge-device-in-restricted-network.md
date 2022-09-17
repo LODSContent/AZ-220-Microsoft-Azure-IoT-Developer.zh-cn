@@ -2,13 +2,8 @@
 lab:
   title: 实验室 14：在受限网络和离线环境中运行 IoT Edge 设备
   module: 'Module 7: Azure IoT Edge Module'
-ms.openlocfilehash: ed1a6e21e83fc4b9f0fa22edf68da4ac946adf65
-ms.sourcegitcommit: b9f2c53cb54dde700e21476bcc7435310d15445d
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "141604969"
 ---
+
 # <a name="run-an-iot-edge-device-in-restricted-network-and-offline"></a>在受限网络和离线环境中运行 IoT Edge 设备
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -451,9 +446,9 @@ IoT Edge 中心模块 (`$edgeHub`) 用于协调 Azure IoT 服务与网关设备�
 
     在部署清单中找到你的更新。 你需要在 `$edgeAgent` 和 `$edgeHub` 下查找它们。
 
-1. 单击边栏选项卡底部的“创建” 。
+1. 单击边栏选项卡底部的“创建” ****。
 
-    保存更改后，将通知 **IoT Edge 设备** 有关模块配置的更改，并且将在设备上对新设置进行相应的重新配置。
+    保存更改后，将通知 **IoT Edge 设备**有关模块配置的更改，并且将在设备上对新设置进行相应的重新配置。
 
     将更改传递到 Azure IoT Edge 设备后，它将使用新配置重启 edgeHub 模块。
 
@@ -762,7 +757,7 @@ IoT Edge 中心模块 (`$edgeHub`) 用于协调 Azure IoT 服务与网关设备�
 
     | 占位符 | 要替换成的值 |
     | :--- | :--- |
-    | `<username>` | **IoTEdgeGateaway** 虚拟机的管理员 **用户名**。 这应该是 **vmadmin**。
+    | `<username>` | **IoTEdgeGateaway** 虚拟机的管理员**用户名**。 这应该是 **vmadmin**。
     | `<ipaddress>` | vm-az220-training-gw0002-{your-id} 虚拟机的公共 IP 地址。
 
 1. 出现提示时，输入 vm-az220-training-gw0002-{your-id} 的管理员密码。

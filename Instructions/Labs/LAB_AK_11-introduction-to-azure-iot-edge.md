@@ -2,13 +2,8 @@
 lab:
   title: 实验室 11：Azure IoT Edge 简介
   module: 'Module 6: Azure IoT Edge Deployment Process'
-ms.openlocfilehash: a223c0aa8abc8c5a16e81d343a0f94a6b9bbdf36
-ms.sourcegitcommit: 88ea18cdadb26810b563a54c06ce5e98344bcd92
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "141258552"
 ---
+
 # <a name="introduction-to-azure-iot-edge"></a>Azure IoT Edge 简介
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -123,7 +118,7 @@ ms.locfileid: "141258552"
 
 1. 查看该命令创建的输出。
 
-    请注意，输出中包含为 IoT Edge 设备创建的 **设备标识** 的信息。 例如，可以看到它默认为具有自动生成密钥的 `symmetricKey` 身份验证，并且如指定的 `--edge-enabled` 参数所示，`iotEdge` 功能被设置为 `true`。
+    请注意，输出中包含为 IoT Edge 设备创建的**设备标识**的信息。 例如，可以看到它默认为具有自动生成密钥的 `symmetricKey` 身份验证，并且如指定的 `--edge-enabled` 参数所示，`iotEdge` 功能被设置为 `true`。
 
     ```json
     {
@@ -155,7 +150,7 @@ ms.locfileid: "141258552"
     }
     ```
 
-1. 输入以下命令，显示 IoT Edge 设备的 **连接字符串**：
+1. 输入以下命令，显示 IoT Edge 设备的**连接字符串**：
 
     ```bash
     az iot hub device-identity connection-string show --device-id sensor-th-0067 --hub-name iot-az220-training-{your-id}
@@ -423,7 +418,7 @@ ms.locfileid: "141258552"
 
 1. 在边栏选项卡顶部，单击“刷新”。
 
-1. 请注意，**tempsensor** 模块的 **运行时状态** 现设置为“运行”。
+1. 请注意，**tempsensor** 模块的**运行时状态**现设置为“运行”。
 
     如果仍未报告该值，请稍等片刻，然后再次刷新该边栏选项卡。
 
@@ -536,7 +531,7 @@ ms.locfileid: "141258552"
 
     这决定了流分析作业将部署到本地 IoT 网关 Edge 设备。
 
-1. 单击边栏选项卡底部的“创建” 。
+1. 单击边栏选项卡底部的“创建” ****。
 
     部署此资源可能需要一些时间。
 
@@ -651,7 +646,7 @@ ms.locfileid: "141258552"
 
     这是刚刚添加到 Edge 设备中的流分析模块。
 
-1. 在“更新 IoT Edge 模块”窗格中，注意 **映像 URI** 指向标准 Azure 流分析映像。
+1. 在“更新 IoT Edge 模块”窗格中，注意**映像 URI**指向标准 Azure 流分析映像。
 
     ```text
     mcr.microsoft.com/azure-stream-analytics/azureiotedge:1.0.8
@@ -724,11 +719,11 @@ ms.locfileid: "141258552"
     },
     ```
 
-1. 单击边栏选项卡底部的“创建” 。
+1. 单击边栏选项卡底部的“创建” ****。
 
 #### <a name="task-6-view-data"></a>任务 6：查看数据
 
-1. 返回到你通过 **SSH** 连接到 **IoT Edge 设备** 的 **Cloud Shell** 会话。
+1. 返回到你通过 **SSH** 连接到 **IoT Edge 设备**的 **Cloud Shell** 会话。
 
     如果关闭或超时，请重新连接。 运行 `SSH` 命令并像以前一样登录。
 

@@ -2,13 +2,8 @@
 lab:
   title: 实验室 07：设备消息路由
   module: 'Module 4: Message Processing and Analytics'
-ms.openlocfilehash: 2601ddbe100553d88feba68b8210fb2c3b70930d
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872829"
 ---
+
 # <a name="device-message-routing"></a>设备消息路由
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -79,7 +74,7 @@ ms.locfileid: "140872829"
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击“确定”  。
+    > 1. 单击 **“确定”** 。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -472,7 +467,8 @@ loggingMessage.Properties.Add("sensorID", "VSLog");
 
 1. 等待“部署成功”消息，然后打开新资源。
 
-    > **** 提示：如果错过了用于访问新资源的消息，或者需要在任何时间查找资源，请选择“主页/所有资源”。 输入充分的资源名称，使其显示在资源列表中。
+    > **
+          **提示：如果错过了用于访问新资源的消息，或者需要在任何时间查找资源，请选择“主页/所有资源”****。 输入充分的资源名称，使其显示在资源列表中。
 
 1. 花点时间检查新的流分析作业。
 
@@ -562,7 +558,7 @@ loggingMessage.Properties.Add("sensorID", "VSLog");
 
 1. 要创建输出，请单击“保存”，然后等待输出创建完毕。
 
-    使用新输出更新 **输出** 列表。
+    使用新输出更新**输出**列表。
 
 #### <a name="task-4-create-the-stream-analytics-job-query"></a>任务 4：创建流分析作业查询
 

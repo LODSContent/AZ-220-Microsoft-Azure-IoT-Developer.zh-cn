@@ -2,13 +2,8 @@
 lab:
   title: 实验室 01：Azure 入门
   module: 'Module 1: Introduction to IoT and Azure IoT Services'
-ms.openlocfilehash: dbeadf10eec7ddeea74c009b635028adea578407
-ms.sourcegitcommit: 88ea18cdadb26810b563a54c06ce5e98344bcd92
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "141258549"
 ---
+
 # <a name="getting-started-with-azure"></a>Azure 入门
 
 ## <a name="lab-scenario"></a>实验室场景
@@ -92,7 +87,7 @@ ms.locfileid: "141258549"
 
     现在，服务列表仅限于与 IoT 解决方案直接相关的服务。
 
-    Azure 门户上的服务/资源页面有时被称为 _边栏选项卡_。 在前几步打开“服务运行状况”页面时，你已打开一个“服务运行状况”边栏选项卡。
+    Azure 门户上的服务/资源页面有时被称为_边栏选项卡_。 在前几步打开“服务运行状况”页面时，你已打开一个“服务运行状况”边栏选项卡。
 
     Azure 门户将边栏选项卡用作一种导航模式，随着你对服务的钻研越来越深入，右侧将打开新的边栏选项卡。 这为水平导航提供了一种痕迹导航形式，并且 Azure 在可单击的边栏选项卡顶部提供了一个文件资源管理器样式的路径。 例如：“主页”>“监视”>“服务运行状况”。 但并不是每个页面都是一个边栏选项卡。 你会很快适应它。
 
