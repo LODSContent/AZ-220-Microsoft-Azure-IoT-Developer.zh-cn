@@ -86,10 +86,10 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
 
 1. 在“课程 ID”字段中，输入 az220 。
 
-1. 若要确定当前用户对象 ID，请打开 Cloud Shell，然后执行以下命令：
+1. 若要确定当前用户 ID，请打开 Cloud Shell，然后执行以下命令：
 
     ```sh
-    az ad signed-in-user show --query objectId -o tsv
+    az ad signed-in-user show --query Id -o tsv
     ```
 
     复制显示的对象 ID。
