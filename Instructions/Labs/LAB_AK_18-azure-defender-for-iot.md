@@ -1,10 +1,10 @@
 ---
 lab:
-  title: 实验室 18：使用 Azure Defender for IoT 检测 IoT 设备是否被篡改
-  module: 'Module 10: Azure Defender and IoT Security'
+  title: 实验室 18：Microsoft Defender for IoT 入门
+  module: 'Module 10: Microsoft Defender and IoT Security'
 ---
 
-# <a name="detect-device-tampering-with-azure-defender-for-iot"></a>使用 Azure Defender for IoT 检测设备篡改情况
+# <a name="detect-device-tampering-with-microsoft-defender-for-iot"></a>使用 Microsoft Defender for IoT 检测设备篡改情况
 
 ## <a name="lab-scenario"></a>实验室场景
 
@@ -18,21 +18,21 @@ Contoso 还正在安装新连接的恒温器，以提高对不同奶酪储藏室
 
 ![实验室 18 体系结构](media/LAB_AK_18-architecture.png)
 
-> 提示：Azure Defender for IoT 之前被称为适用于 IoT 的 Azure 安全中心 。 由于更名是分阶段开展的，因此可能会在在线文档、GitHub 资源和本内容中发现一些不一致的地方。
+> 提示：Microsoft Defender for IoT 之前被称为 Azure Defender for IoT 以及“适用于 IoT 的 Azure 安全中心”   。 由于更名是分阶段开展的，因此可能会在在线文档、GitHub 资源和本内容中发现一些不一致的地方。
 
 ## <a name="in-this-lab"></a>本实验室概览
 
 在本实验室中，你将完成以下活动：
 
 * 配置实验室先决条件（所需的 Azure 资源）
-* 启用 Azure Defender for IoT
+* 启用 Microsoft Defender for IoT
 * 创建并注册新设备
 * 创建一个安全模块孪生
 * 在 Linux 设备上安装基于 C# 的安全代理
 * 配置受监视的资源
 * 创建自定义警报
 * 创建控制台应用以触发警报
-* 在 Azure Defender for IoT 查看警报
+* 查看 Microsoft Defender for IoT 中的警报
 
 ## <a name="lab-instructions"></a>实验室说明
 
@@ -75,7 +75,7 @@ Contoso 还正在安装新连接的恒温器，以提高对不同奶酪储藏室
 
 1. 在“课程 ID”字段中，输入 az220 。
 
-1. 若要验证模板，请单击“查看和创建”。
+1. 若要验证模板，请单击“查看并创建”。
 
 1. 验证通过后，单击“创建”。
 
@@ -89,20 +89,20 @@ Contoso 还正在安装新连接的恒温器，以提高对不同奶酪储藏室
 
 现已创建资源。
 
-### <a name="exercise-2-enable-azure-defender-for-iot-hub"></a>练习 2：启用 Azure Defender for IoT 中心
+### <a name="exercise-2-enable-microsoft-defender-for-iot-hub"></a>练习 2 - 启用 Microsoft Defender for IoT Hub
 
-借助 Azure Defender for IoT，你能够统一安全管理，同时对混合云工作负载以及 Azure IoT 解决方案启用端到端的威胁检测和分析。
+借助 Microsoft Defender for IoT，你能够统一安全管理，同时对混合云工作负载以及 Azure IoT 解决方案启用端到端的威胁检测和分析。
 
-Azure Defender for IoT 由以下组件构成：
+Microsoft Defender for IoT 由以下组件构成：
 
 * IoT 中心集成
 * 设备代理（可选）
 * 发送安全消息 SDK
 * 分析管道
 
-#### <a name="task-1-enable-azure-defender-for-iot"></a>任务 1：启用 Azure Defender for IoT
+#### <a name="task-1-enable-microsoft-defender-for-iot"></a>任务 1：启用 Microsoft Defender for IoT
 
-在此任务中，你将为 IoT 中心启用 Azure Defender for IoT。
+在此任务中，你将为 IoT 中心启用 Microsoft Defender for IoT。
 
 1. 如有必要，请使用 Azure 帐户凭据登录到 Azure 门户。
 
@@ -114,7 +114,7 @@ Azure Defender for IoT 由以下组件构成：
 
 1. 在左侧菜单的“Defender for IoT”下，单击“概述” 。
 
-    首次打开“安全性”窗格时，会载入 Azure Defender for IoT 中心。
+    首次打开“安全性”窗格时，会载入 Microsoft Defender for IoT Hub。
 
 1. 如果显示“保护 IoT 解决方案”按钮，请单击“保护 IoT 解决方案”，然后在出现提示时刷新浏览器窗口 。
 
@@ -122,11 +122,11 @@ Azure Defender for IoT 由以下组件构成：
 
 1. 花费片刻时间查看“安全概述”窗格上的内容。
 
-    > **注意**：载入 Azure Defender for IoT 的第一时间是无法立即检测到威胁的，在本实验室结束前，你将看到此“概览”窗格上报告威胁检测。
+    > 注意：载入 Microsoft Defender for IoT 的第一时间是无法立即检测到威胁的，在本实验室结束前，你将看到此“概览”窗格上报告威胁检测。
 
 #### <a name="task-2-log-analytics-creation"></a>任务 2：创建 Log Analytics
 
-启用 Azure Defender for IoT 以后，应创建 Azure Log Analytics 工作区，以用于存储 IoT 设备、IoT Edge 和 IoT 中心的原始安全事件、警报和建议。
+启用 Microsoft Defender for IoT 以后，应创建 Azure Log Analytics 工作区，以用于存储 IoT 设备、IoT Edge 和 IoT 中心的原始安全事件、警报和建议。
 
 在此任务中，你将快速查看 Log Analytics 的工作区配置。
 
@@ -260,9 +260,9 @@ Azure Defender for IoT 由以下组件构成：
 
 ### <a name="exercise-4-create-a-security-module-twin"></a>练习 4:创建一个安全模块孪生
 
-Azure Defender for IoT 可与现有的 IoT 设备管理平台完全集成，使你能够管理设备的安全状态，以及利用现有的设备控制功能。
+Microsoft Defender for IoT 可与现有的 IoT 设备管理平台完全集成，使你能够管理设备的安全状态，以及利用现有的设备控制功能。
 
-Azure Defender for IoT 利用模块孪生机制，并为每个设备维护一个名为 azureiotsecurity 的安全模块孪生。 该安全模块孪生保存每个设备的所有设备安全性相关信息。 为了充分利用 Azure Defender for IoT 功能，你需要为新的 IoT Edge 设备创建、配置和使用这些安全模块孪生。
+Microsoft Defender for IoT 利用模块孪生机制，并为每个设备维护一个名为 azureiotsecurity 的安全模块孪生。 该安全模块孪生保存每个设备的所有设备安全性相关信息。 为了充分利用 Microsoft Defender for IoT 功能，你需要为新的 IoT Edge 设备创建、配置和使用这些安全模块孪生。
 
 可使用以下两种方法中的任意一种创建安全模块孪生 (azureiotsecurity)：
 
@@ -309,16 +309,16 @@ Azure Defender for IoT 利用模块孪生机制，并为每个设备维护一个
 
     > **注意**：IoT 中心的主机名类似于：iot-az220-training-cah102119.azure-devices.net
 
-### <a name="exercise-5-deploy-azure-defender-for-iot-c-security-agent"></a>练习 5：部署 Azure Defender for IoT C# 安全代理
+### <a name="exercise-5-deploy-microsoft-defender-for-iot-c-security-agent"></a>练习 5：部署 Microsoft Defender for IoT C# 安全代理
 
-Azure Defender for IoT 为通过 IoT 中心记录、处理、聚合和发送安全数据的安全代理提供了参考体系结构。 有基于 C 和 C# 的代理。 对于具有更多受限或最少设备资源的设备，建议使用 C 代理。
+Microsoft Defender for IoT 为通过 IoT 中心记录、处理、聚合和发送安全数据的安全代理提供了参考体系结构。 有基于 C 和 C# 的代理。 对于具有更多受限或最少设备资源的设备，建议使用 C 代理。
 
 安全代理不支持以下功能：
 
-* 从基础操作系统（Linux、Windows）收集原始安全事件。 如需了解有关可用安全数据收集器的更多信息，请参阅《Azure Defender for IoT 代理配置》。
+* 从基础操作系统（Linux、Windows）收集原始安全事件。 如需了解有关可用安全数据收集器的更多信息，请参阅 Microsoft Defender for IoT 代理配置。
 * 将原始安全事件聚合到通过 IoT 中心发送的消息中。
 * 使用现有的设备标识或专用模块标识进行身份验证。 要了解更多信息，请参阅《安全代理身份验证方法》。
-* 使用 azureiotsecurity 模块孪生远程配置。 如需了解更多信息，请参阅《配置 Azure Defender for IoT 代理》。
+* 使用 azureiotsecurity 模块孪生远程配置。 如需了解更多信息，请参阅“配置 Microsoft Defender for IoT 代理”。
 
 在本练习中，你将添加用于 C# 的安全代理，并将其部署到模拟设备 (Linux VM)。
 
@@ -459,9 +459,9 @@ Azure Defender for IoT 为通过 IoT 中心记录、处理、聚合和发送安�
 
 1. 在 Cloud Shell 命令提示符下，请输入你先前使用的 SSH 命令重新连接到虚拟机。
 
-    Azure Defender for IoT 代理现在应该处于活动状态并正在运行。
+    Microsoft Defender for IoT 代理现在应该处于活动状态并正在运行。
 
-1. 在 Cloud Shell 命令提示符下，请输入以下命令检查 Azure Defender for IoT 代理的部署状态。
+1. 请在 Cloud Shell 命令提示符下输入以下命令检查 Microsoft Defender for IoT 代理的部署状态。
 
     ```cmd/sh
     systemctl status ASCIoTAgent.service
@@ -481,7 +481,7 @@ Azure Defender for IoT 为通过 IoT 中心记录、处理、聚合和发送安�
 
     具体来说，你应该验证该服务是否是 Loaded: loaded 和 Active: active (running)。
 
-    > **注意**：如果 Azure Defender for IoT 代理未运行或未处于活动状态，请查看[为 Linux 部署 Defender for IoT 基于 C# 的安全代理](https://docs.microsoft.com/en-us/azure/defender-for-iot/device-builders/how-to-deploy-linux-cs)。 常见问题是可能会造成服务 Active: activating 的键值错误或未指定完整的 IoT 中心主机名。
+    > 注意：如果 Microsoft Defender for IoT 代理未运行或未处于活动状态，请查看[为 Linux 部署 Defender for IoT 基于 C# 的安全代理](https://docs.microsoft.com/en-us/azure/defender-for-iot/device-builders/how-to-deploy-linux-cs)。 常见问题是可能会造成服务 Active: activating 的键值错误或未指定完整的 IoT 中心主机名。
 
 1. 在 Azure 门户中，导航回 IoT 中心边栏选项卡，然后打开 vm-az220-training-edge0002-{your-id} 设备边栏选项卡。
 
@@ -491,15 +491,15 @@ Azure Defender for IoT 为通过 IoT 中心记录、处理、聚合和发送安�
 
     ![连接的 Azure IoT 安全模块的屏幕截图](media/LAB_AK_18-device-connected-agent.png)
 
-现在，设备上已安装了 Azure Defender for IoT 设备代理，这些代理将能够收集、聚合和分析设备中的原始安全事件。
+现在设备上已安装 Microsoft Defender for IoT 设备代理，这些代理将能收集、聚合和分析设备中的原始安全事件。
 
 ### <a name="exercise-6-configure-solution-management"></a>练习 6：配置解决方案管理
 
-Azure Defender for IoT 为基于 Azure 的 IoT 解决方案提供端到端安全性。
+Microsoft Defender for IoT 为基于 Azure 的 IoT 解决方案提供端到端安全性。
 
-使用 Azure Defender for IoT 时，可在一个仪表板中监视整个 IoT 解决方案，并显示 Azure 中你的所有 IoT 设备、IoT 平台和后端资源。
+使用 Microsoft Defender for IoT 时，可在一个仪表板中监视整个 IoT 解决方案，并显示 Azure 中你的所有 IoT 设备、IoT 平台和后端资源。
 
-在 IoT 中心启用后，Azure Defender for IoT 会自动识别也已连接到你的 IoT 中心的，以及与你的 IoT 解决方案相关的其他 Azure 服务。
+在 IoT 中心启用后，Microsoft Defender for IoT 会自动识别也已连接到你的 IoT 中心的，以及与你的 IoT 解决方案相关的其他 Azure 服务。
 
 除了自动关系检测以外，还可以选择要将其他哪些 Azure 资源组标记为 IoT 解决方案的一部分。 做出选择后，可以添加整个订阅、资源组或单个资源。
 
@@ -518,7 +518,7 @@ Azure Defender for IoT 为基于 Azure 的 IoT 解决方案提供端到端安全
 
 1. 要查看资源列表，请单击“受监视资源”。
 
-    请注意，资源列表已包括你的 IoT 中心、之前激活 Azure Defender for IoT 时创建的工作区以及当前订阅。
+    请注意，资源列表已包括你的 IoT 中心、之前激活 Microsoft Defender for IoT 时创建的工作区以及当前订阅。
 
 1. 在窗格顶部，单击“编辑”。
 
@@ -538,11 +538,11 @@ Azure Defender for IoT 为基于 Azure 的 IoT 解决方案提供端到端安全
 
 1. 关闭“解决方案管理”窗格。
 
-定义所有资源关系后，Azure Defender for IoT 会利用 Azure Defender 来提供安全建议，并针对这些资源发出警报。
+定义所有资源关系后，Microsoft Defender for IoT 会利用 Azure Defender 来提供安全建议，并针对这些资源发出警报。
 
-#### <a name="task-2-view-azure-defender-for-iot-in-action"></a>任务 2：查看运行中的 Azure Defender for IoT
+#### <a name="task-2-view-microsoft-defender-for-iot-in-action"></a>任务 2：查看运行中的 Microsoft Defender for IoT
 
-现在，你已在设备上安装了安全代理，并配置了解决方案。 现在非常适合检查 Azure Defender for IoT 的不同视图。
+现在，你已在设备上安装了安全代理，并配置了解决方案。 现在非常适合检查 Microsoft Defender for IoT 的不同视图。
 
 1. 在左侧菜单的“Defender for IoT”下，单击“概述” 。
 
@@ -568,7 +568,7 @@ Azure Defender for IoT 为基于 Azure 的 IoT 解决方案提供端到端安全
 
 你比现成算法更了解你的 IoT 设备。
 
-对于完全了解其预期设备行为的用户，通过 Azure Defender for IoT，可以将这种了解转化为设备行为策略，并对与预期正常行为偏离的任何情况发出警报。
+对于完全了解其预期设备行为的用户，通过 Microsoft Defender for IoT，可以将这种了解转化为设备行为策略，并对与预期正常行为偏离的任何情况发出警报。
 
 #### <a name="task-1---customize-an-alert"></a>任务 1 - 自定义警报
 
@@ -842,13 +842,13 @@ Azure Defender for IoT 为基于 Azure 的 IoT 解决方案提供端到端安全
 
     你可以在本实验的其余部分中使该应用运行，以生成多个警报。
 
-### <a name="exercise-9-review-azure-defender-for-iot-alerts"></a>练习 9：查看 Azure Defender for IoT 警报
+### <a name="exercise-9-review-microsoft-defender-for-iot-alerts"></a>练习 9：查看 Microsoft Defender for IoT 警报
 
 此时，你的控制台应用将发送足够的遥测数据，以触发先前创建的自定义警报。
 
 > **提示**：警报设置为在 5 分钟内从设备发送到云的消息少于 1 条且多于 5 条时触发。
 
-#### <a name="task-1-review-the-azure-defender-for-iot-dashboard"></a>任务 1：查看 Azure Defender for IoT 仪表板
+#### <a name="task-1-review-the-microsoft-defender-for-iot-dashboard"></a>任务 1：查看 Microsoft Defender for IoT 仪表板
 
 1. 在 Azure 门户菜单上，单击“仪表板”，然后打开 IoT 中心。
 
