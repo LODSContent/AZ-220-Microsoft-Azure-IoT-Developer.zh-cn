@@ -76,7 +76,7 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击 **“确定”** 。
+    > 1. 单击“确定”  。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -89,7 +89,7 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
 1. 若要确定当前用户 ID，请打开 Cloud Shell，然后执行以下命令：
 
     ```sh
-    az ad signed-in-user show --query Id -o tsv
+    az ad signed-in-user show --query id -o tsv
     ```
 
     复制显示的对象 ID。
@@ -113,9 +113,9 @@ Contoso 管理层决定在他们的数字化发展进程中迈出新的一步，
 
 现已创建资源。
 
-#### <a name="task-2---verify-tools"></a>任务 2 - 验证工具
+#### <a name="task-2---verify-lab-tool-versions"></a>任务 2 - 验证实验室工具版本
 
-1. 在虚拟机环境中，打开一个 Windows 命令提示符窗口。
+1. 在实验室环境中，打开一个 Windows 命令提示符窗口。
 
 1. 若要显示本地安装的 Azure CLI 版本，请输入以下命令：
 

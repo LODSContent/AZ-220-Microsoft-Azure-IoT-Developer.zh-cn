@@ -47,7 +47,7 @@ lab:
 若要确保这些资源可用，请完成以下步骤。
 
 1. 在虚拟机环境中，打开 Microsoft Edge 浏览器窗口，然后导航到以下 Web 地址：
- 
+
     +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab14.json+++
 
     > 注意：每当看到绿色的“T”符号（例如 +++输入此文本+++）时，可以单击关联的文本，信息将键入到虚拟机环境内的当前字段中。
@@ -64,7 +64,7 @@ lab:
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击 **“确定”** 。
+    > 1. 单击“确定”  。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -584,7 +584,7 @@ IoT Edge 中心模块 (`$edgeHub`) 用于协调 Azure IoT 服务与网关设备�
 
 本地计算机现在可以将 VM 名称解析为相应的 IP 地址。
 
-#### <a name="task-1-configure-device-app"></a>任务 1：配置设备应用
+#### <a name="task-2-configure-device-app"></a>任务 2：配置设备应用
 
 在此任务中，你将配置下游 IoT 设备（子设备或叶设备），以使用对称密钥连接到 IoT 中心。 设备将配置为使用包含对称密钥（除了父级 IoT Edge 设备的网关主机名）的连接字符串连接到 IoT 中心和父级 IoT Edge 设备。
 
@@ -672,7 +672,7 @@ IoT Edge 中心模块 (`$edgeHub`) 用于协调 Azure IoT 服务与网关设备�
 
 1. 让模拟设备保持运行状态，同时继续进行下一个练习。
 
-#### <a name="task-2-test-device-connectivity-and-offline-support"></a>任务 2：测试设备连接和脱机支持
+#### <a name="task-3-test-device-connectivity-and-offline-support"></a>任务 3：测试设备连接和脱机支持
 
 在此任务中，你将监视来自 sensor-th-0084 的事件，这些事件通过 IoT Edge 透明网关 vm-az220-training-gw0002-{your-id} 发送到 Azure IoT 中心 。 然后，你将中断 vm-az220-training-gw0002-{your-id} 和 Azure IoT 中心之间的连接，以查看仍从 IoT 子设备发送到 IoT Edge 网关的遥测。 之后，你将恢复与 Azure IoT 中心的连接，并监视 IoT Edge 网关继续将遥测发送到 Azure IoT 中心。
 
@@ -722,7 +722,7 @@ IoT Edge 中心模块 (`$edgeHub`) 用于协调 Azure IoT 服务与网关设备�
 
     > **注意**：接下来，你需要测试脱机功能。 为此，你需要使 vm-az220-training-gw0002-{your-id} 设备脱机。 由于这是在 Azure 中运行的虚拟机，因此可以通过向 VM 的网络安全组添加出站规则对此进行模拟。
 
-#### <a name="task3-add-rule-to-block-traffic"></a>任务 3：添加规则以阻止流量
+#### <a name="task-4-add-rule-to-block-traffic"></a>任务 4：添加规则以阻止流量
 
 1. 在 Azure 门户中，导航到仪表板，然后找到 rg-az220vm 资源组磁贴。
 
