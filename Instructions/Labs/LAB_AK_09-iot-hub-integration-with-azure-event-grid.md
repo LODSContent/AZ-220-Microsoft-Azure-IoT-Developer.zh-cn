@@ -41,7 +41,7 @@ Nancy 告知你，她的设备技术员团队将负责安装新的联网恒温�
 若要确保这些资源可用，请完成以下步骤。
 
 1. 在虚拟机环境中，打开 Microsoft Edge 浏览器窗口，然后导航到以下 Web 地址：
- 
+
     +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab09.json+++
 
     > 注意：每当看到绿色的“T”符号（例如 +++输入此文本+++）时，可以单击关联的文本，信息将键入到虚拟机环境内的当前字段中。
@@ -58,7 +58,7 @@ Nancy 告知你，她的设备技术员团队将负责安装新的联网恒温�
     >
     > 1. 在“资源组”下拉列表中，选择“新建”。
     > 1. 在“名称”下，输入 rg-az220 。
-    > 1. 单击 **“确定”** 。
+    > 1. 单击“确定”  。
 
 1. 在“实例详细信息”下的“区域”下拉列表中，选择离你最近的区域 。
 
@@ -68,7 +68,7 @@ Nancy 告知你，她的设备技术员团队将负责安装新的联网恒温�
 
 1. 在“课程 ID”字段中，输入 az220 。
 
-1. 若要验证模板，请单击“查看和创建”。
+1. 若要验证模板，请单击“查看并创建”。
 
 1. 验证通过后，单击“创建”。
 
@@ -80,23 +80,25 @@ Nancy 告知你，她的设备技术员团队将负责安装新的联网恒温�
 
     * connectionString
 
-现已创建资源。
+    现已创建资源。
 
->**注意**：你可能需要注册 microsoft.eventgrid 资源提供程序，本实验室才能成功。 运行以下命令进行检查：
+    > **注意**：你可能需要注册 microsoft.eventgrid 资源提供程序，本实验室才能成功。 运行以下命令进行检查：
 
-```bash
-az provider show --namespace microsoft.eventgrid -o tsv
-```
-> 如果结果显示“Registered”，则无需执行更多操作。 如果显示“NotRegistered”，请运行以下命令，注册 microsoft.eventgrid 提供程序。
+    ```bash
+    az provider show --namespace microsoft.eventgrid -o tsv
+    ```
 
-```bash
-az provider register --namespace microsoft.eventgrid
-```
-> 这可能需要 15 分钟或更长时间才能完成。 你应看到以下消息：
+    如果结果显示“Registered”，则无需执行更多操作。 如果显示“NotRegistered”，请运行以下命令，注册 microsoft.eventgrid 提供程序。
 
-```bash
-Registering is still on-going. You can monitor using 'az provider show -n microsoft.eventgrid'
-```
+    ```bash
+    az provider register --namespace microsoft.eventgrid
+    ```
+
+    这可能需要 15 分钟或更长时间才能完成。 你应看到以下消息：
+
+    ```bash
+    Registering is still on-going. You can monitor using 'az provider show -n microsoft.eventgrid'
+    ```
 
 ### <a name="exercise-2-create-http-web-hook-logic-app-that-sends-an-email"></a>练习 2：创建发送电子邮件的 HTTP Webhook 逻辑应用
 
@@ -132,9 +134,7 @@ Azure 逻辑应用是一种云服务，当你需要跨企业或组织集成应�
 
 1. 在“区域”下拉列表中，选择用于资源组的同一 Azure 区域。
 
-1. 保留“启用 Log Analytics”设置为“否” 。
-
-1. 单击“查看 + 创建”  。
+1. 单击“查看 + 创建”。
 
 1. 在“查看 + 创建”选项卡中，单击“创建”********。
 
